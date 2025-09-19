@@ -1,4 +1,4 @@
-<header>
+<header data-aos="fade-down" data-aos-duration="1000">
     <nav class="bg-stone-500">
         <div class="max-w-screen-xl mx-auto flex flex-wrap justify-between items-center p-4">
 

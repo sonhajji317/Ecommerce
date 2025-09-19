@@ -1,6 +1,6 @@
 <div class="grid gap-4 sm:mx-9">
     {{-- Produk Utama --}}
-    <div>
+    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
         <a href="/product/{{ $product1->id }}/details">
             <div class="relative h-[60vh] sm:h-screen bg-cover bg-center group w-full"
                 style="background-image: url('{{ $product1->image ? asset('storage/' . $product1->image) : asset('storage/placeholder-image.png') }}')">
@@ -25,7 +25,8 @@
 </div>
 
 {{-- Grid produk lain --}}
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 px-6 sm:px-9 py-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 px-6 sm:px-9 py-5" data-aos="fade-left"
+    data-aos-offset="300" data-aos-easing="ease-in-sine">
     @forelse ($product2 as $product)
         <div class="relative group w-full">
             <a href="/product/{{ $product->id }}/details">

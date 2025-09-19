@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Order list')
 @section('content')
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-auto px-6 pt-4 pb-4 rounded-lg gap-4">
-        @foreach ($orders as $order)
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-auto px-6 pt-4 pb-4 rounded-lg gap-4 min-h-screen">
+        @forelse ($orders as $order)
             <div class="group relative block overflow-hidden rounded-xl">
                 <img src="{{ $order->product->image ? asset('storage/' . $order->product->image) : asset('storage/placeholder-image.png') }}"
                     alt="" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
@@ -45,7 +46,9 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+        @empty
+            <p class="text-center text-gray-500 col-span-4 text-2xl font-bold">Ooopss!!! No orders found.</p>
+        @endforelse
 
     </div>
     <div class="mb-6 px-6">

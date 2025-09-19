@@ -9,7 +9,8 @@
                 class="px-2 py-1 rounded-lg border border-stone-700 bg-stone-700 text-stone-100 hover:bg-stone-100 hover:text-stone-700 font-semibold">See
                 all</a>
         </div>
-        <div class="max-w-8xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4 sm:px-8 px-6">
+        <div class="max-w-8xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4 sm:px-8 px-6" data-aos="zoom-in-up"
+            data-aos-duration="1000">
             @foreach ($products as $product)
                 <div
                     class="bg-stone-500 border border-stone-500 rounded-lg shadow-md hover:shadow-xl transition duration-300">
